@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+int main() {
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */ 
+    char s[100];
+    int i,j,c=0;
+    scanf("%c",s);
+    for(j=48;j<57;j++){
+       for(i=0;s[i]!='\0';i++)
+       {
+           if(j==s[i])
+           c++;
+       }
+       printf("%d",c);
+       c=0;
+    }
+    return 0;
+}
