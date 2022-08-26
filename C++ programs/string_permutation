@@ -1,0 +1,29 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+void substring(string inp,int l, int r);
+int main() {
+    string str;
+    cin>>str;
+    substring (str,0,str.length());
+    
+    return 0;
+   
+}
+void substring(string inp,int l,int r)
+{
+   
+     if(l==r)
+     {
+     cout<<inp<<" ";
+     return;
+     }
+     for(int i=l;i<r;i++)
+     {  
+        swap(inp[i],inp[l]);
+        substring(inp,l+1,r);
+     }
+}
